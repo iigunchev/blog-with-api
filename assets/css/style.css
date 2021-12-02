@@ -1,15 +1,30 @@
-
-section{
+section {
+    padding-top: 3em;
+    padding-bottom: 1em;
     background-color: cadetblue;
 }
-.thumbnail{
+
+.thumbnail {
     margin-left: 0 auto;
 }
-.row button{
-    width: 45%;
+
+.row-cards {
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.row-cards{
-    margin: 0 auto ;
-    justify-content: center;
+h1 {
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    width: fit-content;
+    min-height: 25em;
+}
+
+@media (max-width: 768px) {
+    div .col-sm-10 {
+        margin-bottom: 2em;
+    }
 }
