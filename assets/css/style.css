@@ -21,6 +21,7 @@ img {
     max-width: 100%;
     width: fit-content;
     min-height: 25em;
+    max-height: 25em;
 }
 
 @media (max-width: 768px) {
