@@ -1,3 +1,14 @@
-#bootstrap-overrides .comment {
-    background-color: lightblue!important;
+section{
+    background-color: cadetblue;
+}
+.thumbnail{
+    margin-left: 0 auto;
+}
+.row button{
+    width: 45%;
+}
+
+.row-cards{
+    margin: 0 auto ;
+    justify-content: center;
 }

@@ -5,13 +5,15 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
 // Fetching post elements from API
-fetch("https://jsonplaceholder.typicode.com/posts/1")
-  .then((response) => response.json())
-  .then((json) => {
-    $("#postTitle").text(json.title);
-    $(".postBody").text(json.body);
-  });
 
+function createPostInfo(post) {
+  fetch(`https://jsonplaceholder.typicode.com/posts/${post}`)
+    .then((response) => response.json())
+    .then((json) => {
+      $("#postTitle").text(json.title);
+      $(".postBody").text(json.body);
+    });
+}
 fetch("https://jsonplaceholder.typicode.com/users/1")
   .then((response) => response.json())
   .then((json) => {
