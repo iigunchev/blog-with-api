@@ -17,7 +17,7 @@ h1 {
     margin: 0 auto;
 }
 
-img {
+.thumbnail > img {
     max-width: 100%;
     width: fit-content;
     min-height: 25em;
@@ -28,4 +28,8 @@ img {
     div .col-sm-10 {
         margin-bottom: 2em;
     }
+}
+
+.list-group-item:nth-child(even) {
+    background-color: var(--bs-gray-200);
 }
