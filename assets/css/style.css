@@ -3,7 +3,6 @@ section {
     padding-bottom: 1em;
     background-color: cadetblue;
 }
-
 .thumbnail {
     margin-left: 0 auto;
 }
@@ -29,7 +28,27 @@ h1 {
         margin-bottom: 2em;
     }
 }
-
+.list-group {
+    overflow: auto;
+    height: 90vh;
+}
 .list-group-item:nth-child(even) {
     background-color: var(--bs-gray-200);
+}
+
+.post img {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    max-height: 100px;
+    
+}
+.author {
+    display: block;
+}
+.material-icons:hover {
+    transform: scale(1.2)
+}
+.italic {
+    font-style: italic;
 }
