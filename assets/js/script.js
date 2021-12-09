@@ -29,14 +29,14 @@ function generateBlogPosts(num) {
                 <a href="#" class="list-group-item list-group-item-action" aria-current="true" data-linkId="${i}" >
                     <div class="d-flex w-100 justify-content-between contenedor">
                         <div class="col-12 col-lg-3 img-div post" data-bs-toggle="modal" data-bs-target="#postModal" data-postId="${i}" ><img id="imgPost${i}" src="${imgSrc}" class="rounded img-fluid" alt="..." ></div>
-                        <div class="d-flex col-12 col-lg-7 post" data-bs-toggle="modal" data-bs-target="#postModal" data-postId="${i}">
-                            <div class='ms-3'>
-                            <h5 class="mb-1" id="titlePost${i}">${data[i].title}</h5>
-                            <p class="mb-1" id="bodyPost${i}">${data[i].body}</p>
-                            <span class="author${i}">Post by <b>${username}</b></span>
+                        <div class="d-flex col-12 col-lg-8 post" data-bs-toggle="modal" data-bs-target="#postModal" data-postId="${i}">
+                            <div class='ms-3 d-flex flex-column align-items-stretch'>
+                                <h3 class="mb-1 " id="titlePost${i}">${data[i].title}</h3>
+                                <span class="author${i} author-main justify-self-end">by <span class='author-highlight'><b>${username}</b></span></span>
+                                <p class="mb-1" id="bodyPost${i}">${data[i].body}</p>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-2 text-end">
+                        <div class="col-12 col-lg-1 text-end">
                             <button type="button" class="btn editPostBtn" data-bs-toggle="modal" data-tt="tooltip"
                                 data-bs-target="#editModal" data-bs-placement="top" data-edit="${i}" title="Edit post">
                                 <span class="material-icons"> edit </span>
