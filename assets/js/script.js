@@ -72,7 +72,7 @@ function generateBlogPosts(num) {
     )
       .then((response) => response.json())
       .then((data) => {
-        imgSrc = data.results[img].urls.thumb;
+        imgSrc = data.results[img].urls.regular;
         username = data.results[img].user.username;
         portfolio = data.results[img].user.portfolio_url;
         img++;
@@ -83,7 +83,7 @@ function generateBlogPosts(num) {
         let blogPost = $(`      
                 <a href="#" class="list-group-item list-group-item-action" aria-current="true" data-linkId="${i}" >
                     <div class="d-flex w-100 justify-content-between">
-                        <div class="col-2"><img id="imgPost${i}" src="${imgSrc}" class="rounded img-fluid" alt="..."></div>
+                        <div class="col-2 img-div"><img id="imgPost${i}" src="${imgSrc}" class="rounded img-fluid" alt="..."></div>
                         <div class="d-flex col-8 post" data-bs-toggle="modal" data-bs-target="#postModal" data-postId="${i}">
                             
                             <div class='ms-3'>
