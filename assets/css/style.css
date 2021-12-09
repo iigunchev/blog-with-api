@@ -1,9 +1,3 @@
-section {
-    padding-top: 3em;
-    padding-bottom: 1em;
-    background-color: cadetblue;
-}
-
 .thumbnail {
     margin-left: 0 auto;
 }
@@ -17,7 +11,7 @@ h1 {
     margin: 0 auto;
 }
 
-img {
+.thumbnail>img {
     max-width: 100%;
     width: fit-content;
     min-height: 25em;
@@ -27,5 +21,57 @@ img {
 @media (max-width: 768px) {
     div .col-sm-10 {
         margin-bottom: 2em;
+    }
+}
+
+.list-group {
+    overflow: auto;
+    height: 90vh;
+}
+
+.list-group-item:nth-child(even) {
+    background-color: var(--bs-gray-200);
+}
+
+.author {
+    display: block;
+}
+
+.material-icons:hover {
+    transform: scale(1.2)
+}
+
+.italic {
+    font-style: italic;
+}
+.title{
+    text-align: center;
+}
+
+img{
+    width:100%;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+p.mb-1{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 1050px){
+    p.mb-1{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
