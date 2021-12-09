@@ -80,7 +80,20 @@ p.mb-1:first-letter {
 .italic {
     font-style: italic;
 }
-.title{
+
+a{
+    margin: .5em 0;
+}
+
+body{
+
+    background: url('/assets/css/casey-horner-RmoWqDCqN2E-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.title h1{
+    margin: 0 auto;
     text-align: center;
     margin: 0 auto;
 }
