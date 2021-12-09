@@ -14,11 +14,14 @@ function generateBlogPosts(num) {
     )
       .then((response) => response.json())
       .then((data) => {
-        imgSrc = data.results[img].urls.thumb;
+        imgSrc = data.results[img].urls.regular;
         username = data.results[img].user.username;
         portfolio = data.results[img].user.portfolio_url;
         img++;
-      });
+      })
+      .catch(err => {
+        imgSrc = "https://images.unsplash.com/photo-1639036020433-0b9b752cb3b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      } )
     fetch("https://jsonplaceholder.typicode.com/posts/")
       .then((response) => response.json())
       .then((data) => {
@@ -120,8 +123,9 @@ postContainer.addEventListener("scroll", function () {
     initAll();
   }
 });
-// FUNCTIONS
 
+
+// FUNCTIONS
 function initEditButtons(buttons, post) {
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -142,10 +146,13 @@ function initEditButtons(buttons, post) {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
-        console.log(`Post ${post} has been updated!`);
         $(`*[data-postId="${post}"] h5`).text($("#editPostTitle").val());
         $(`*[data-postId="${post}"] p`).text($("#editPostBody").val());
+        $("#alert-update-success").removeClass("hide");
+        $("#alert-update-success").addClass("show");
+        setTimeout(() => {
+          $("#alert-update-success").fadeOut(2000);
+        }, 1000);
       });
   });
 }
@@ -159,7 +166,12 @@ function initDeleteButtons(buttons, post) {
       })
         .then((response) => response.json())
         .then((json) => {
-          console.log(`Post ${post} has been deleted!`);
+          $("#alert-update-success").removeClass("hide");
+        $("#alert-update-success").addClass("show");
+        $("#alert-update-success").text('The post has been successfully deleted')
+        setTimeout(() => {
+          $("#alert-update-success").fadeOut(2000);
+        }, 1000);
           document.querySelector(`[data-linkid="${post}"]`).remove();
         });
     });
