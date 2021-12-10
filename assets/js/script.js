@@ -146,7 +146,7 @@ function initEditButtons(buttons, post) {
     })
       .then((response) => response.json())
       .then((json) => {
-        $(`*[data-postId="${post}"] h5`).text($("#editPostTitle").val());
+        $(`*[data-postId="${post}"] h3`).text($("#editPostTitle").val());
         $(`*[data-postId="${post}"] p`).text($("#editPostBody").val());
         $("#alert-update-success").removeClass("hide");
         $("#alert-update-success").addClass("show");
