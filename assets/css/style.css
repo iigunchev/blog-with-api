@@ -140,3 +140,17 @@ p.mb-1:first-letter {
         text-overflow: ellipsis;
     }
 }
+
+@media (max-width: 435px){
+    a{
+        width: 95%;
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 800px){
+    a{
+        width: 95%;
+        margin-left: 1em;
+    }
+}
